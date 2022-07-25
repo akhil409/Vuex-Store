@@ -2,7 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link :to="{ name:'UsersList' }">Users Lists</router-link> |
+      <router-link :to="{ name:'DataLists' }">Data Lists</router-link>
     </div>
     <router-view/>
   </div>
@@ -28,5 +30,9 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+#nav a{
+  text-decoration: none;
 }
 </style>
